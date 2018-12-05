@@ -79,16 +79,19 @@
 
 
 
-<meta name="description" content="good good study,day day up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="菜鸟lalala">
-<meta property="og:url" content="https://y121.github.io/index.html">
+<meta name="description" content="前言：断断续续学习vue已经有很长时间了，但是一直处于看的阶段，看理论，看视频。似懂非懂的阶段，然后又因为事情耽搁一段时间，看过的都忘了，又从头开始看理论…这样循环了几次，很浪费时间，又什么都没学到，其实主要还是因为自己懒。现在，在2018年的最后一个月，我终于觉醒了，我要做点东西来给自己交差，毕竟年初的时候立的flag还在那（哭）。所以，冲鸭，啦啦啦！  &amp;nbsp;&amp;nbsp;todo实例，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次完整的todo实例">
+<meta property="og:url" content="https://y121.github.io/2018/12/05/记一次完整的todo实例/index.html">
 <meta property="og:site_name" content="菜鸟lalala">
-<meta property="og:description" content="good good study,day day up">
+<meta property="og:description" content="前言：断断续续学习vue已经有很长时间了，但是一直处于看的阶段，看理论，看视频。似懂非懂的阶段，然后又因为事情耽搁一段时间，看过的都忘了，又从头开始看理论…这样循环了几次，很浪费时间，又什么都没学到，其实主要还是因为自己懒。现在，在2018年的最后一个月，我终于觉醒了，我要做点东西来给自己交差，毕竟年初的时候立的flag还在那（哭）。所以，冲鸭，啦啦啦！  &amp;nbsp;&amp;nbsp;todo实例，">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://y121.github.io/2018/12/05/记一次完整的todo实例/todo.png">
+<meta property="og:updated_time" content="2018-12-05T04:37:02.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菜鸟lalala">
-<meta name="twitter:description" content="good good study,day day up">
+<meta name="twitter:title" content="记一次完整的todo实例">
+<meta name="twitter:description" content="前言：断断续续学习vue已经有很长时间了，但是一直处于看的阶段，看理论，看视频。似懂非懂的阶段，然后又因为事情耽搁一段时间，看过的都忘了，又从头开始看理论…这样循环了几次，很浪费时间，又什么都没学到，其实主要还是因为自己懒。现在，在2018年的最后一个月，我终于觉醒了，我要做点东西来给自己交差，毕竟年初的时候立的flag还在那（哭）。所以，冲鸭，啦啦啦！  &amp;nbsp;&amp;nbsp;todo实例，">
+<meta name="twitter:image" content="https://y121.github.io/2018/12/05/记一次完整的todo实例/todo.png">
 
 
 
@@ -118,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://y121.github.io/">
+  <link rel="canonical" href="https://y121.github.io/2018/12/05/记一次完整的todo实例/">
 
 
 
 
 
-  <title>菜鸟lalala</title>
+  <title>记一次完整的todo实例 | 菜鸟lalala</title>
   
 
 
@@ -143,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -247,9 +249,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -279,9 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/05/记一次完整的todo实例/" itemprop="url">记一次完整的todo实例</a></h1>
+          <h1 class="post-title" itemprop="name headline">记一次完整的todo实例</h1>
         
 
         <div class="post-meta">
@@ -331,9 +331,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>前言：断断续续学习vue已经有很长时间了，但是一直处于看的阶段，看理论，看视频。似懂非懂的阶段，然后又因为事情耽搁一段时间，看过的都忘了，又从头开始看理论…这样循环了几次，很浪费时间，又什么都没学到，其实主要还是因为自己懒。现在，在2018年的最后一个月，我终于觉醒了，我要做点东西来给自己交差，毕竟年初的时候立的flag还在那（哭）。所以，冲鸭，啦啦啦！</p>
 </blockquote>
 <p>&nbsp;&nbsp;todo实例，下面开始啦！</p>
@@ -351,8 +349,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">directives: &#123;</span><br><span class="line">　　focus(el) &#123;</span><br><span class="line">　　　　el.focus();</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>　　以上就是这几天完整的做的一个todo实例，肯定还有不足，还需改进，待续。</p>
 
-          
-        
       
     </div>
     
@@ -369,12 +365,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -384,10 +380,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -395,6 +392,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -415,8 +416,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -460,6 +470,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现功能"><span class="nav-number">1.</span> <span class="nav-text">实现功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-amp-CSS"><span class="nav-number">2.</span> <span class="nav-text">HTML&amp;CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue"><span class="nav-number">3.</span> <span class="nav-text">vue</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -600,6 +626,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
