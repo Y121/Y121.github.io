@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="es6,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="good good study,day day up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="菜鸟lalala">
-<meta property="og:url" content="https://y121.github.io/index.html">
+<meta name="description" content="&amp;#x3000;&amp;#x3000;&amp;#x5728;&amp;#x7406;&amp;#x89E3;&amp;#x53D1;&amp;#x5E03;&amp;#x8BA2;&amp;#x9605;&amp;#x6A21;&amp;#x5F0F;&amp;#x7684;&amp;#x65F6;&amp;#x5019;&amp;#xFF0C;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x9700;&amp;#x6C42;&amp;#x662F;&amp;#x8981;&amp;#x77E5;&amp;#x9053;&amp;#x51FD;">
+<meta name="keywords" content="es6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="扩展运算符和剩余运算符">
+<meta property="og:url" content="https://y121.github.io/2018/12/09/扩展运算符和剩余运算符/index.html">
 <meta property="og:site_name" content="菜鸟lalala">
-<meta property="og:description" content="good good study,day day up">
+<meta property="og:description" content="&amp;#x3000;&amp;#x3000;&amp;#x5728;&amp;#x7406;&amp;#x89E3;&amp;#x53D1;&amp;#x5E03;&amp;#x8BA2;&amp;#x9605;&amp;#x6A21;&amp;#x5F0F;&amp;#x7684;&amp;#x65F6;&amp;#x5019;&amp;#xFF0C;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x9700;&amp;#x6C42;&amp;#x662F;&amp;#x8981;&amp;#x77E5;&amp;#x9053;&amp;#x51FD;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-09T07:03:23.868Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="菜鸟lalala">
-<meta name="twitter:description" content="good good study,day day up">
+<meta name="twitter:title" content="扩展运算符和剩余运算符">
+<meta name="twitter:description" content="&amp;#x3000;&amp;#x3000;&amp;#x5728;&amp;#x7406;&amp;#x89E3;&amp;#x53D1;&amp;#x5E03;&amp;#x8BA2;&amp;#x9605;&amp;#x6A21;&amp;#x5F0F;&amp;#x7684;&amp;#x65F6;&amp;#x5019;&amp;#xFF0C;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x9700;&amp;#x6C42;&amp;#x662F;&amp;#x8981;&amp;#x77E5;&amp;#x9053;&amp;#x51FD;">
 
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://y121.github.io/">
+  <link rel="canonical" href="https://y121.github.io/2018/12/09/扩展运算符和剩余运算符/">
 
 
 
 
 
-  <title>菜鸟lalala</title>
+  <title>扩展运算符和剩余运算符 | 菜鸟lalala</title>
   
 
 
@@ -146,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -282,9 +283,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -314,9 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/09/扩展运算符和剩余运算符/" itemprop="url">扩展运算符和剩余运算符</a></h1>
+          <h1 class="post-title" itemprop="name headline">扩展运算符和剩余运算符</h1>
         
 
         <div class="post-meta">
@@ -388,9 +387,7 @@
       
 
       
-        
-          
-            <p>&#x3000;&#x3000;&#x5728;&#x7406;&#x89E3;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x6C42;&#x662F;&#x8981;&#x77E5;&#x9053;&#x51FD;&#x6570;&#x4E2D;&#x9664;&#x4E86;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;&#xFF0C;js&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;arguments&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x6240;&#x6709;&#x5F62;&#x53C2;&#xFF0C;&#x4F46;&#x662F;arguments&#x662F;&#x7C7B;&#x6570;&#x7EC4;&#xFF0C;&#x8FD8;&#x8981;&#x7528;Array.prototype.slice.call&#x65B9;&#x6CD5;&#x6765;&#x53D8;&#x6210;&#x6570;&#x7EC4;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;Array.from&#x628A;&#x7C7B;&#x6570;&#x7EC4;&#x53D8;&#x6210;&#x6570;&#x7EC4;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x5269;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;(&#x2026;rest)&#x3002;s&#x5269;&#x4F59;&#x53C2;&#x6570;&#x662F;&#x771F;&#x6B63;&#x7684;Array&#x5B9E;&#x4F8B;&#xFF0C;&#x80FD;&#x591F;&#x5728;&#x5B83;&#x4E0A;&#x9762;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#x3002;&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x5269;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;&#x90FD;&#x662F;&#x4EE5;&#x4E09;&#x70B9;&#x5F00;&#x5934;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#x3002;</p>
+        <p>&#x3000;&#x3000;&#x5728;&#x7406;&#x89E3;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x6C42;&#x662F;&#x8981;&#x77E5;&#x9053;&#x51FD;&#x6570;&#x4E2D;&#x9664;&#x4E86;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;&#xFF0C;js&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;arguments&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x6240;&#x6709;&#x5F62;&#x53C2;&#xFF0C;&#x4F46;&#x662F;arguments&#x662F;&#x7C7B;&#x6570;&#x7EC4;&#xFF0C;&#x8FD8;&#x8981;&#x7528;Array.prototype.slice.call&#x65B9;&#x6CD5;&#x6765;&#x53D8;&#x6210;&#x6570;&#x7EC4;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;Array.from&#x628A;&#x7C7B;&#x6570;&#x7EC4;&#x53D8;&#x6210;&#x6570;&#x7EC4;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x5269;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;(&#x2026;rest)&#x3002;s&#x5269;&#x4F59;&#x53C2;&#x6570;&#x662F;&#x771F;&#x6B63;&#x7684;Array&#x5B9E;&#x4F8B;&#xFF0C;&#x80FD;&#x591F;&#x5728;&#x5B83;&#x4E0A;&#x9762;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#x3002;&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x5269;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;&#x90FD;&#x662F;&#x4EE5;&#x4E09;&#x70B9;&#x5F00;&#x5934;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#x3002;</p>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Sports.prototype.emit = function(eventName, ...rest) { //&#x6B64;&#x5904;&#x662F;&#x505A;&#x5269;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x6709;&#x591A;&#x4E2A;&#x53C2;&#x6570;[...[1,2,3]]</span><br><span class="line">&#x3000;&#x3000;//[].slice.call(arguments,1);//&#x53D6;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;</span><br><span class="line">&#x3000;&#x3000;//Array.from(arguments).slice(1);</span><br><span class="line">&#x3000;&#x3000;if (this._events[eventName]) {</span><br><span class="line">&#x3000;&#x3000;&#x3000;&#x3000;this._events[eventName].forEach(cb =&gt; {</span><br><span class="line">&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;cb(...rest); //&#x6B64;&#x5904;&#x662F;&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26; ...[1,2,3]</span><br><span class="line">&#x3000;&#x3000;&#x3000;&#x3000;});</span><br><span class="line">&#x3000;&#x3000;}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>&#x3000;&#x3000;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x662F;&#xFF1A;rest&#x53C2;&#x6570;&#x4E4B;&#x540E;&#x4E0D;&#x80FD;&#x518D;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x5373;rest&#x53C2;&#x6570;&#x5E94;&#x8BE5;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x800C;&#x4E14;&#x51FD;&#x6570;&#x7684;length&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;rest&#x3002;<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(function(a) {}).length  // 1</span><br><span class="line">(function(...a) {}).length  // 0</span><br><span class="line">(function(a, ...b) {}).length  // 1</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>&#x3000;&#x3000;&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x5C31;&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x8F6C;&#x5316;&#x4E3A;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x53C2;&#x6570;&#x7CFB;&#x5217;&#x3002;<br>&#x3000;&#x3000;github&#x4F20;&#x9001;&#x95E8;&#xFF1A;<a href="https://github.com/Y121/vue-shoppingcar/blob/master/client/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85.html" target="_blank" rel="noopener">&#x8FD9;&#x91CC;&#x54DF;</a></p>
@@ -413,8 +410,6 @@
             document.body.appendChild(img);
           });
       </script>
-          
-        
       
     </div>
     
@@ -429,304 +424,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://y121.github.io/2018/12/06/关于hexo/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="啦啦啦">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/head1.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="菜鸟lalala">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/06/关于hexo/" itemprop="url">关于hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-06T17:34:09+08:00">
-                2018-12-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/es6/" rel="tag"># es6</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>&#x8FD9;&#x91CC;&#x662F;&#x4E3A;&#x4E86;&#x8BB0;&#x5F55;&#x5173;&#x4E8E;hexo&#x7684;&#x7F51;&#x5740;&#xFF0C;&#x56E0;&#x4E3A;&#x81EA;&#x5DF1;&#x592A;&#x61D2;&#x4E86;<span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f60a.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60a.png?v8">&#x1F60A;</span></p>
-</blockquote>
-<p>&#x3000;&#x3000;hexo&#x64CD;&#x4F5C;&#x5728;&#x8FD9;&#x91CC;&#xFF1A;<a href="https://www.imooc.com/article/71378" target="_blank" rel="noopener">hhh</a><br>&#x3000;&#x3000;&#x627E;&#x8868;&#x60C5;&#x5728;&#x8FD9;&#x91CC;&#xFF1A;<a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">&#x627E;&#x8868;&#x60C5;</a>&#x3002;</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://y121.github.io/2018/12/05/记一次完整的todo实例/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="啦啦啦">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/head1.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="菜鸟lalala">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/05/记一次完整的todo实例/" itemprop="url">记一次完整的todo实例</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-05T09:50:50+08:00">
-                2018-12-05
-              </time>
+              <a href="/2018/12/06/关于hexo/" rel="next" title="关于hexo">
+                <i class="fa fa-chevron-left"></i> 关于hexo
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/study/" itemprop="url" rel="index">
-                    <span itemprop="name">study</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>前言：断断续续学习vue已经有很长时间了，但是一直处于看的阶段，看理论，看视频。似懂非懂的阶段，然后又因为事情耽搁一段时间，看过的都忘了，又从头开始看理论…这样循环了几次，很浪费时间，又什么都没学到，其实主要还是因为自己懒。现在，在2018年的最后一个月，我终于觉醒了，我要做点东西来给自己交差，毕竟年初的时候立的flag还在那:sob:。所以，冲鸭，啦啦啦！:sparkles:</p>
-</blockquote>
-<p>&nbsp;&nbsp;todo实例，下面开始啦！</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/05/记一次完整的todo实例/" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -736,10 +463,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -747,6 +475,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -987,6 +719,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

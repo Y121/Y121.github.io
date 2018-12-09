@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>扩展运算符和剩余运算符</title>
+      <link href="/2018/12/09/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%89%A9%E4%BD%99%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+      <url>/2018/12/09/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%89%A9%E4%BD%99%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+      
+        <content type="html"><![CDATA[<p>&#x3000;&#x3000;&#x5728;&#x7406;&#x89E3;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x6C42;&#x662F;&#x8981;&#x77E5;&#x9053;&#x51FD;&#x6570;&#x4E2D;&#x9664;&#x4E86;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;&#xFF0C;js&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;arguments&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x6240;&#x6709;&#x5F62;&#x53C2;&#xFF0C;&#x4F46;&#x662F;arguments&#x662F;&#x7C7B;&#x6570;&#x7EC4;&#xFF0C;&#x8FD8;&#x8981;&#x7528;Array.prototype.slice.call&#x65B9;&#x6CD5;&#x6765;&#x53D8;&#x6210;&#x6570;&#x7EC4;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;Array.from&#x628A;&#x7C7B;&#x6570;&#x7EC4;&#x53D8;&#x6210;&#x6570;&#x7EC4;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x5269;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;(&#x2026;rest)&#x3002;s&#x5269;&#x4F59;&#x53C2;&#x6570;&#x662F;&#x771F;&#x6B63;&#x7684;Array&#x5B9E;&#x4F8B;&#xFF0C;&#x80FD;&#x591F;&#x5728;&#x5B83;&#x4E0A;&#x9762;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#x3002;&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x5269;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;&#x90FD;&#x662F;&#x4EE5;&#x4E09;&#x70B9;&#x5F00;&#x5934;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#x3002;</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Sports.prototype.emit = function(eventName, ...rest) { //&#x6B64;&#x5904;&#x662F;&#x505A;&#x5269;&#x4F59;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x6709;&#x591A;&#x4E2A;&#x53C2;&#x6570;[...[1,2,3]]</span><br><span class="line">&#x3000;&#x3000;//[].slice.call(arguments,1);//&#x53D6;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;</span><br><span class="line">&#x3000;&#x3000;//Array.from(arguments).slice(1);</span><br><span class="line">&#x3000;&#x3000;if (this._events[eventName]) {</span><br><span class="line">&#x3000;&#x3000;&#x3000;&#x3000;this._events[eventName].forEach(cb =&gt; {</span><br><span class="line">&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;cb(...rest); //&#x6B64;&#x5904;&#x662F;&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26; ...[1,2,3]</span><br><span class="line">&#x3000;&#x3000;&#x3000;&#x3000;});</span><br><span class="line">&#x3000;&#x3000;}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>&#x3000;&#x3000;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x662F;&#xFF1A;rest&#x53C2;&#x6570;&#x4E4B;&#x540E;&#x4E0D;&#x80FD;&#x518D;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x5373;rest&#x53C2;&#x6570;&#x5E94;&#x8BE5;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x800C;&#x4E14;&#x51FD;&#x6570;&#x7684;length&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;rest&#x3002;<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(function(a) {}).length  // 1</span><br><span class="line">(function(...a) {}).length  // 0</span><br><span class="line">(function(a, ...b) {}).length  // 1</span><br></pre></td></tr></tbody></table></figure><p></p><p>&#x3000;&#x3000;&#x6269;&#x5C55;&#x8FD0;&#x7B97;&#x7B26;&#x5C31;&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x8F6C;&#x5316;&#x4E3A;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x53C2;&#x6570;&#x7CFB;&#x5217;&#x3002;<br>&#x3000;&#x3000;github&#x4F20;&#x9001;&#x95E8;&#xFF1A;<a href="https://github.com/Y121/vue-shoppingcar/blob/master/client/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85.html" target="_blank" rel="noopener">&#x8FD9;&#x91CC;&#x54DF;</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> es6 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>关于hexo</title>
       <link href="/2018/12/06/%E5%85%B3%E4%BA%8Ehexo/"/>
       <url>/2018/12/06/%E5%85%B3%E4%BA%8Ehexo/</url>
